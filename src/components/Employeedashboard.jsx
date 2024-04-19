@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Divider, Icon, IconButton, Stack, Typography,useTheme , useMediaQuery,Snackbar, Grid, Button} from "@mui/material";
+import {Box, Divider, Icon, IconButton, Stack, Typography,useTheme , useMediaQuery,Button} from "@mui/material";
 import {Dropdown, MenuButton,Menu,MenuItem} from '@mui/joy';
 import { EastOutlined, ErrorOutline, FreeBreakfastOutlined, KeyboardArrowDown, ShortcutOutlined, SouthOutlined, WorkHistoryOutlined } from "@mui/icons-material";
 import BarsDataset from "./Graphdata";
@@ -29,7 +29,7 @@ function Employeedashboard(){
                 <Stack direction = "row"  justifyContent="space-between" >
 
                     <Box flex={4} height="100px">
-                    <Box sx={{display:"flex", height:"100px", alignItems:"flex-start",  display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Box sx={{display:"flex", height:"100px",  alignItems: "center", justifyContent: "center" }}>
                         <Stack direction="column">
                         <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}>9:16 AM
                         </Typography>
@@ -47,7 +47,7 @@ function Employeedashboard(){
                     <Divider orientation="vertical" variant="middle" flexItem sx={{margin:'0'}}/>
 
                     <Box flex={4}>
-                    <Box sx={{display:"flex", height:"100px", alignItems:"flex-start", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Box sx={{display:"flex", height:"100px",  borderRadius:"28px", alignItems: "center", justifyContent: "center" }}>
                         <Stack direction="column">
                         <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}>45 m
                         </Typography>
@@ -69,7 +69,7 @@ function Employeedashboard(){
 
                 <Stack direction = "row"  justifyContent="space-between" >
                     <Box flex={4} height="100px">
-                    <Box sx={{display:"flex", height:"100px", alignItems:"flex-start",  display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Box sx={{display:"flex", height:"100px", alignItems: "center", justifyContent: "center" }}>
                         <Stack direction="column">
                         <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}>4h 23m
                         </Typography>
@@ -88,7 +88,7 @@ function Employeedashboard(){
                     <Divider orientation="vertical" variant="middle" sx={{margin:'0'}} flexItem />
 
                     <Box flex={4}>
-                    <Box sx={{display:"flex", height:"100px", alignItems:"flex-start",  display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Box sx={{display:"flex", height:"100px",   alignItems: "center", justifyContent: "center" }}>
                         <Stack direction="column">
                         <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}>3
                         </Typography>

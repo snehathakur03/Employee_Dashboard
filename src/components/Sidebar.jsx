@@ -1,7 +1,6 @@
 import {React, useState} from "react";
-import {Box, List, ListItem, ListItemButton, ListItemIcon,ListItemText, Typography, Badge} from "@mui/material";
+import {Box, List, ListItem, ListItemButton, ListItemIcon, Typography, Badge} from "@mui/material";
 import {ShowChartOutlined, GroupOutlined, AccessTimeOutlined, VolumeDownOutlined, CalendarTodayOutlined, SettingsOutlined, LogoutOutlined} from "@mui/icons-material"
-import Employeedashboard from "./Employeedashboard";
 
 
 function Sidebar(){
