@@ -1,32 +1,39 @@
-import React from "react";
+import {React} from "react";
 import {Box, Divider, Icon, IconButton, Stack, Typography,useTheme , useMediaQuery,Button} from "@mui/material";
 import {Dropdown, MenuButton,Menu,MenuItem} from '@mui/joy';
-import { EastOutlined, ErrorOutline, FreeBreakfastOutlined, KeyboardArrowDown, ShortcutOutlined, SouthOutlined, WorkHistoryOutlined } from "@mui/icons-material";
-import BarsDataset from "./Graphdata";
-import BottomRightSnackbar from "./Snackbarmsg";
+import { EastOutlined,  ErrorOutline, FreeBreakfastOutlined, KeyboardArrowDown, ShortcutOutlined, SouthOutlined, WorkHistoryOutlined } from "@mui/icons-material";
+import BarsDataset from "../components/Graphdata";
+import BottomRightSnackbar from "../components/Snackbarmsg";
 
 
-function Employeedashboard(){
-   
+function Employeedashboard() {
+ 
     const theme = useTheme();
+    const isXsOrSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
-  // Check if the screen size is extra small (xs) or small (sm)
-  const isXsOrSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
-
-    return(
+    return (
         <>
-        <Box paddingLeft={4} paddingRight={4} flex={4} bgcolor={"#edecec57"} >
-        <Box padding={"16px 0px"} width={"100%"}>
-            <Typography  fontWeight={700} fontSize={19} variant="p">My Dashboard</Typography>
+            <Box paddingLeft={4} paddingRight={4} flex={4} bgcolor={"#edecec57"}>
+                <Box padding={"16px 0px"} width={"100%"}>
+                <Typography  fontWeight={700} fontSize={19} variant="p">
+                    Dashboard
+                </Typography>
+            {/* )} */}
+        
             </Box>
             <Divider />
 
-            <Stack  direction={isXsOrSmScreen ? 'column' : 'row'}  justifyContent="space-between" height="350px" marginTop={4}>
-            <Box  flex={4} >
+            <Stack
+                direction={isXsOrSmScreen ? 'column' : 'row'}
+                justifyContent="space-between"
+                marginTop={4}
+                sx={{ display: { xs: 'block', sm: 'block', md: 'flex' } }}
+                >     
+                <Box  flex={4} >
                 <Typography variant="p"  fontSize={14} fontWeight={600} color={"#000000d6"}> My Stats</Typography>
-                <Box sx={{bgcolor:"#fff",borderRadius:"15px", height:"250px", padding:"20px", marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+                <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
                 
-                <Stack direction = "row"  justifyContent="space-between" >
+                <Stack direction = "row"  justifyContent="space-between" sx={{ display: { xs: 'block', sm: 'block', md: 'flex' } }}>
 
                     <Box flex={4} height="100px">
                     <Box sx={{display:"flex", height:"100px",  alignItems: "center", justifyContent: "center" }}>
@@ -44,7 +51,11 @@ function Employeedashboard(){
                     </Box>
                     </Box>
 
-                    <Divider orientation="vertical" variant="middle" flexItem sx={{margin:'0'}}/>
+                    {isXsOrSmScreen ? (
+                    <Divider orientation="horizontal" variant="middle" flexItem sx={{ margin: '0' }} />
+                    ) : (
+                    <Divider orientation="vertical" variant="middle" flexItem sx={{ margin: '0' }} />
+                    )}
 
                     <Box flex={4}>
                     <Box sx={{display:"flex", height:"100px",  borderRadius:"28px", alignItems: "center", justifyContent: "center" }}>
@@ -64,10 +75,13 @@ function Employeedashboard(){
                 </Stack>
                 
 
-                <Divider orientation="horizontal" variant="middle" flexItem />
+                {isXsOrSmScreen ? (
+                <Divider orientation="horizontal" variant="middle" flexItem sx={{ margin: '0' }} />
+                ) : (
+                <Divider orientation="vertical" variant="middle" flexItem sx={{ margin: '0' }} />
+                )}
 
-
-                <Stack direction = "row"  justifyContent="space-between" >
+                <Stack direction = "row"  justifyContent="space-between"  sx={{ display: { xs: 'block', sm: 'block', md: 'flex' } }}>
                     <Box flex={4} height="100px">
                     <Box sx={{display:"flex", height:"100px", alignItems: "center", justifyContent: "center" }}>
                         <Stack direction="column">
@@ -85,7 +99,12 @@ function Employeedashboard(){
 
                     </Box>
 
-                    <Divider orientation="vertical" variant="middle" sx={{margin:'0'}} flexItem />
+                    {isXsOrSmScreen ? (
+                    <Divider orientation="horizontal" variant="middle" flexItem sx={{ margin: '0' }} />
+                    ) : (
+                    <Divider orientation="vertical" variant="middle" flexItem sx={{ margin: '0' }} />
+                    )}
+
 
                     <Box flex={4}>
                     <Box sx={{display:"flex", height:"100px",   alignItems: "center", justifyContent: "center" }}>
@@ -105,21 +124,48 @@ function Employeedashboard(){
                     </Box>
 
                 </Stack>
+                
+                {isXsOrSmScreen && (
+                    <Divider orientation="horizontal" variant="middle" flexItem sx={{ margin: '0' }} />
+                )}
 
-                <Stack direction = "row"  justifyContent="space-between" margin="15px">
+
+                <Stack direction = {isXsOrSmScreen ?"column":"row"}  justifyContent="space-between"     margin={isXsOrSmScreen ? "0px" : "15px"}>
                 <Box flex={4} sx={{ display: "flex", height: "50px", alignItems: "center", justifyContent: "flex-start" }}>
-                        <Button sx={{  textTransform: 'none',color:"#418fdc", fontWeight:500, letterSpacing:"0.5", fontSize:"16px"}}>View My Tasks
+
+                {isXsOrSmScreen ? (
+                <Button sx={{  textTransform: 'none',color:"#418fdc", fontWeight:500, letterSpacing:"0.5", fontSize:"15px"}}>View My Tasks
+                <EastOutlined sx={{ display: "flex", height: "20px", alignItems: "center", justifyContent: "center" ,color:"#62aaf1", paddingLeft:"10px" }}/>
+                </Button>        ) : (
+                <Button sx={{  textTransform: 'none',color:"#418fdc", fontWeight:500, letterSpacing:"0.5", fontSize:"16px"}}>View My Tasks
                 <EastOutlined sx={{ display: "flex", height: "50px", alignItems: "center", justifyContent: "center" ,color:"#62aaf1", paddingLeft:"10px" }}/>
-                </Button>
+                </Button>   
+                 )}
+        
+                       
                 </Box>
 
-                <Divider orientation="vertical" variant="middle" flexItem />
+
+                {isXsOrSmScreen ? (
+                    <Divider orientation="horizontal" variant="middle" flexItem sx={{ margin: '0' }} />
+                    ) : (
+                    <Divider orientation="vertical" variant="middle" flexItem sx={{ margin: '0' }} />
+                    )}
+
 
                 <Box flex={4}>
                 <Box flex={4} sx={{ display: "flex", height: "50px", alignItems: "center", justifyContent: "flex-start" }}>
-                        <Button sx={{  textTransform: 'none',color:"#418fdc", fontWeight:500, letterSpacing:"0.5", fontSize:"16px",paddingLeft:"20px"}}>View My Leaves
-                <EastOutlined sx={{ display: "flex", height: "50px", alignItems: "center", justifyContent: "center" ,color:"#62aaf1", paddingLeft:"10px" }}/>
-                </Button>
+                     
+                {isXsOrSmScreen ? (
+                 <Button sx={{  textTransform: 'none',color:"#418fdc", fontWeight:500, letterSpacing:"0.5", fontSize:"15px",}}>View My Leaves
+                 <EastOutlined sx={{ display: "flex", height: "20px", alignItems: "center", justifyContent: "center" ,color:"#62aaf1", paddingLeft:"10px" }}/>
+                 </Button>       ) : (
+                 <Button sx={{  textTransform: 'none',color:"#418fdc", fontWeight:500, letterSpacing:"0.5", fontSize:"16px",paddingLeft:"20px"}}>View My Leaves
+                 <EastOutlined sx={{ display: "flex", height: "50px", alignItems: "center", justifyContent: "center" ,color:"#62aaf1", paddingLeft:"10px" }}/>
+                 </Button>
+                 )}
+                     
+                       
                 </Box>
                 </Box>
 
@@ -130,7 +176,7 @@ function Employeedashboard(){
             <Box flex={0.2}></Box>
 
             <Box flex={4}  >
-                <Stack direction = "row"  justifyContent="space-between" >
+                <Stack direction = "row"  justifyContent="space-between" marginTop = {isXsOrSmScreen ?"15px":"0px"}  >
                 <Typography variant="p"  fontSize={14} fontWeight={600} color={"#000000d6"}> Work Hours</Typography>
                 <Dropdown>
                 <MenuButton sx={{padding:"0px", border:"0px", color:"#898989",  alignItems: "flex-start !important" }}>Last 7 days
@@ -146,13 +192,14 @@ function Employeedashboard(){
                 </Dropdown>
             </Stack>
 
-            <Box sx={{ bgcolor:"#fff",borderRadius:"15px", height:"250px", padding:"20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+            <Box sx={{ bgcolor:"#fff",borderRadius:"15px", height:"277px", padding:"20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
                 <BarsDataset />
             </Box>
             </Box>
             </Stack>
 
-
+                 <br /><br/>
+                
             <Box sx={{ 
             bgcolor: "#fff",
             borderRadius: "15px",
@@ -185,6 +232,8 @@ function Employeedashboard(){
             <BottomRightSnackbar />
 
             </Box>
+
+            
 
 
 </>

@@ -33,7 +33,7 @@ const customGrid = {
   horizontal: true,
   y: {
     tick: {
-      values: [4, 8],  
+      values: [4, 8], 
     },
   },
 };
