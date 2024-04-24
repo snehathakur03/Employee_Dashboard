@@ -8,7 +8,7 @@ import {
 
 import Navbar from "./components/Navbar";
 import Employeedashboard from "./routes/Employeedashboard";
-import Groupdata from "./routes/Groupdata";
+import Groupdata from "./routes/Teammembers";
 import "./App.css";
 import { Stack } from "@mui/material";
 
