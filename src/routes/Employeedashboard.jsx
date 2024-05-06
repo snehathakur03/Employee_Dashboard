@@ -192,7 +192,7 @@ function Employeedashboard() {
                 </Dropdown>
             </Stack>
 
-            <Box sx={{ bgcolor:"#fff",borderRadius:"15px", height:"277px", padding:"20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+            <Box sx={{ bgcolor:"#fff",borderRadius:"15px", height:"317px", marginTop:"7px", padding:"20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
                 <BarsDataset />
             </Box>
             </Box>

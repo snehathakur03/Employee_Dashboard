@@ -21,7 +21,6 @@ function Navbar() {
     },
   });
 
-
   const [selected, setSelected] = useState(null);
 
   const handleItemClick = (index) => {
@@ -32,8 +31,9 @@ function Navbar() {
     <>
       <ThemeProvider theme={theme}>
         <div className="navbar">
+          {/* Show the MenuIcon only in mobile view */}
           <Link to="#" className="menu-bars">
-            <MenuIcon onClick={showSidebar} />
+            <MenuIcon onClick={showSidebar} className="mobile-menu-icon" />
           </Link>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
@@ -45,44 +45,42 @@ function Navbar() {
             </li>
             
             <li className="nav-text">
-            <Typography variant="h4" fontWeight={"bold"} color={"#516ed9bf"} >hr</Typography>
+              <Typography variant="h4" fontWeight={"bold"} color={"#516ed9bf"} >hr</Typography>
             </li>
 
             {Sidebar.map((item, index) => (
-                
               <li key={index} className={item.cName}>
-                  <Box height="45px" borderRadius={2} 
-               sx={{
-                bgcolor: selected === index ? "#516ed9" : "#ebebeb70",
-                color: selected === index ? "#fff" : "#8c8c8cc2",
-              }}
-              onClick={() => handleItemClick(index)}
-              >
-                <Link to={item.path}>
-                  {item.icon}
-                </Link>
+                <Box height="45px" borderRadius={2} 
+                  sx={{
+                    bgcolor: selected === index ? "#516ed9" : "#ebebeb70",
+                    color: selected === index ? "#fff" : "#8c8c8cc2",
+                  }}
+                  onClick={() => handleItemClick(index)}
+                >
+                  <Link to={item.path}>
+                    {item.icon}
+                  </Link>
                 </Box>
               </li>
             ))}
           </ul>
 
-
           <Box
-        position="absolute"
-        bottom={0}
-        left={0}
-        right={0}
-        textAlign="center"
-        bgcolor="#ebebeb70"
-        color="#8c8c8cc2"
-        p={2}
-      >
-        <Link to="/logout">
-          <LogoutOutlined color="error" />
-        </Link>
-      </Box>
-    </nav>
-</ThemeProvider>
+            position="absolute"
+            bottom={0}
+            left={0}
+            right={0}
+            textAlign="center"
+            bgcolor="#ebebeb70"
+            color="#8c8c8cc2"
+            p={2}
+          >
+            <Link to="/logout">
+              <LogoutOutlined color="error" />
+            </Link>
+          </Box>
+        </nav>
+      </ThemeProvider>
     </>
   );
 }

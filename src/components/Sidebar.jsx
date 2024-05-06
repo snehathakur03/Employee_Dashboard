@@ -1,5 +1,5 @@
 import React from "react";
-import {GroupOutlined,AccessTimeOutlined, CalendarTodayOutlined, VolumeDownOutlined, SettingsOutlined, LogoutOutlined, ShowChartOutlined} from "@mui/icons-material";
+import {GroupOutlined,AccessTimeOutlined, CalendarTodayOutlined, SettingsOutlined, ShowChartOutlined} from "@mui/icons-material";
 
 export const Sidebar = [
     {
@@ -14,18 +14,7 @@ export const Sidebar = [
     icon: <GroupOutlined />,
     cName: "nav-text",
   },
-  {
-    title: "",
-    path: "/access",
-    icon: <AccessTimeOutlined />, 
-    cName: "nav-text",
-  },
-  {
-    title: "",
-    path: "/notification",
-    icon: <VolumeDownOutlined />, 
-    cName: "nav-text",
-  },
+ 
   {
     title: "",
     path: "/calender",
@@ -34,14 +23,15 @@ export const Sidebar = [
   },
   {
     title: "",
-    path: "/settings",
-    icon: <SettingsOutlined />, 
+    path: "/activities",
+    icon: <AccessTimeOutlined />, 
     cName: "nav-text",
   },
+  
   {
     title: "",
-    path: "/logout",
-    icon: <LogoutOutlined/>, 
+    path: "/settings",
+    icon: <SettingsOutlined />, 
     cName: "nav-text",
   }
 ];
