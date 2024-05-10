@@ -14,20 +14,20 @@ import Settings from "./routes/Settings";
 import Activity from "./routes/Myactivity";
 
 import "./App.css";
-import { Box, Stack } from "@mui/material";
+import {Grid } from "@mui/material";
 
 const AppLayout = () => (
   <>
-    <Stack direction="row">
-    <Box flex={0.4}>
+      <Grid container>
+      <Grid item xs={0.6} display="flex" alignItems="center" justifyContent="center">
       <div sx="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; !important">
         <Navbar/>
         </div>
-        </Box>
-        <Box flex={6}>
+      </Grid>
+      <Grid item xs>
         <Outlet />
-      </Box>
-      </Stack>
+      </Grid>
+      </Grid>
   </>
 );
 
