@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
@@ -23,8 +23,18 @@ function Navbar() {
 
   const [selected, setSelected] = useState(null);
 
+  useEffect(() => {
+    const storedSelected = localStorage.getItem("selected");
+    if (storedSelected !== null) {
+      setSelected(parseInt(storedSelected));
+    } else {
+      setSelected(0); 
+    }
+  }, []);
+
   const handleItemClick = (index) => {
     setSelected(index);
+    localStorage.setItem("selected", index.toString()); 
   };
 
   return (
@@ -45,14 +55,14 @@ function Navbar() {
             </li>
             
             <li className="nav-text">
-              <Typography variant="h4" fontWeight={"bold"} color={"#516ed9bf"} >hr</Typography>
+              <Typography variant="h4" fontWeight={"bold"} color={"#556ee6"} >hr</Typography>
             </li>
 
             {Sidebar.map((item, index) => (
               <li key={index} className={item.cName}>
                 <Box height="45px" borderRadius={2} 
                   sx={{
-                    bgcolor: selected === index ? "#516ed9" : "#ebebeb70",
+                    bgcolor: selected === index ? "#556ee6" : "#f9fafc",
                     color: selected === index ? "#fff" : "#8c8c8cc2",
                   }}
                   onClick={() => handleItemClick(index)}

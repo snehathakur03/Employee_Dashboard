@@ -12,11 +12,11 @@ export default function Timesheet(){
 
             <Box marginTop="15px">
             <FormGroup>
-             <FormControlLabel control={<Checkbox sx={{ '& .MuiSvgIcon-root': { fontSize: 16 }}}/>} label="All projects" sx={{  '& .MuiTypography-root': {fontSize:"13px", color:"#4f4f4f"}}}/>
-             <FormControlLabel control={<Checkbox sx={{ '& .MuiSvgIcon-root': { fontSize: 16 }}}/>} label="HR app" sx={{  '& .MuiTypography-root': {fontSize:"13px", color:"#4f4f4f"}}} />
-             <FormControlLabel control={<Checkbox  sx={{ '& .MuiSvgIcon-root': { fontSize: 16 }}}/>} label="Lead tracker"  sx={{  '& .MuiTypography-root': {fontSize:"13px", color:"#4f4f4f"}}}/>
-             <FormControlLabel control={<Checkbox  sx={{ '& .MuiSvgIcon-root': { fontSize: 16 }}}/>} label="E-Box"  sx={{  '& .MuiTypography-root': {fontSize:"13px", color:"#4f4f4f"}}}/>
-             <FormControlLabel control={<Checkbox  sx={{ '& .MuiSvgIcon-root': { fontSize: 16 }}}/>} label="Other"  sx={{  '& .MuiTypography-root': {fontSize:"13px", color:"#4f4f4f"}}}/>
+             <FormControlLabel control={<Checkbox sx={{ '& .MuiSvgIcon-root': { fontSize: 16 }}}/>} label="All projects" sx={{  '& .MuiTypography-root': {fontSize:"13px", color:"#787a81"}}}/>
+             <FormControlLabel control={<Checkbox sx={{ '& .MuiSvgIcon-root': { fontSize: 16 }}}/>} label="HR app" sx={{  '& .MuiTypography-root': {fontSize:"13px", color:"#787a81"}}} />
+             <FormControlLabel control={<Checkbox  sx={{ '& .MuiSvgIcon-root': { fontSize: 16 }}}/>} label="Lead tracker"  sx={{  '& .MuiTypography-root': {fontSize:"13px", color:"#787a81"}}}/>
+             <FormControlLabel control={<Checkbox  sx={{ '& .MuiSvgIcon-root': { fontSize: 16 }}}/>} label="E-Box"  sx={{  '& .MuiTypography-root': {fontSize:"13px", color:"#787a81"}}}/>
+             <FormControlLabel control={<Checkbox  sx={{ '& .MuiSvgIcon-root': { fontSize: 16 }}}/>} label="Other"  sx={{  '& .MuiTypography-root': {fontSize:"13px", color:"#787a81"}}}/>
              </FormGroup>
 
             </Box>
@@ -33,7 +33,7 @@ export default function Timesheet(){
             sx={{ textTransform:"none",
             fontSize:"13px",
             fontFamily:"Poppins,san-serif",
-            backgroundColor:"#516ed9bf",
+            backgroundColor:"#556ee6",
             color:"white"}}
             alignItems= "flex-start !important" >New Task</Button>
         </Box>
@@ -45,25 +45,25 @@ export default function Timesheet(){
     <Grid container spacing={2} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
     
     <Grid item xs={2} >            
-    <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px",fontWeight: "600",color:"#696969c4"}}>
+    <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px",fontWeight: "600",color:"#787a81"}}>
     3:00 pm - 4:00 pm
     </Typography>
     </Grid>
 
     <Grid item xs={2} >            
-    <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px", fontWeight: "600",color:"#696969c4"}}>
+    <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px", fontWeight: "600",color:"#787a81"}}>
     19 Mar 2024
     </Typography>
     </Grid>
 
     <Grid item xs={3} >            
-    <Typography variant="p" sx={{ fontSize: "12px",  paddingLeft:"0px",fontWeight: "600",color:"#696969c4"}}>
+    <Typography variant="p" sx={{ fontSize: "12px",  paddingLeft:"0px",fontWeight: "600",color:"#787a81"}}>
     Design system update
     </Typography>
     </Grid>
 
     <Grid item xs={2} >            
-    <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px", fontWeight: "600", color:"#696969c4"}}>
+    <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px", fontWeight: "600", color:"#787a81"}}>
      Others
     </Typography>
     </Grid>
@@ -75,8 +75,8 @@ export default function Timesheet(){
     fontSize:"13px",
     fontFamily:"Poppins,san-serif",
     fontWeight:"550",
-    color:"#516ed9bf",
-    backgroundColor:"#e0e8fc57",
+    color:"#556ee6",
+    backgroundColor:"#eef1ff",
     border:"0px",
     boxShadow:"none"}}
     alignItems= "flex-start !important" >Edit</Button>
@@ -85,11 +85,11 @@ export default function Timesheet(){
 
     <Divider sx={{ my: '10px' }} />
 
-    <Box sx={{width:"90px",height:"25px",backgroundColor:"#e0e8fc57",borderRadius:"10px", display:"flex", alignItems:"center", justifyContent:"center"}}>
-        <Typography variant="p" sx={{ color:"#516ed9bf", fontSize:"11.5px",fontWeight:"550",letterSpacing:"0.7"}}>#Meeting</Typography>
+    <Box sx={{width:"90px",height:"25px",backgroundColor:"#eef1ff",borderRadius:"10px", display:"flex", alignItems:"center", justifyContent:"center"}}>
+        <Typography variant="p" sx={{ color:"#556ee6", fontSize:"11.5px",fontWeight:"550",letterSpacing:"0.7"}}>#Meeting</Typography>
     </Box>
     <Box sx={{my:"10px"}}>
-    <Typography variant="p" sx={{ color:"#696969", fontSize:"11.5px"}}>
+    <Typography variant="p" sx={{ color:"#787a81", fontSize:"11.5px"}}>
         Updated the design system components with the new brand guidelines and added few more components
     </Typography>
     </Box>  
@@ -106,25 +106,25 @@ export default function Timesheet(){
        <Grid container spacing={2} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
        
        <Grid item xs={2} >            
-       <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px",fontWeight: "600",color:"#696969c4"}}>
+       <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px",fontWeight: "600",color:"#787a81"}}>
        3:00 pm - 4:00 pm
        </Typography>
        </Grid>
    
        <Grid item xs={2} >            
-       <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px", fontWeight: "600",color:"#696969c4"}}>
+       <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px", fontWeight: "600",color:"#787a81"}}>
        19 Mar 2024
        </Typography>
        </Grid>
    
        <Grid item xs={3} >            
-       <Typography variant="p" sx={{ fontSize: "12px",  paddingLeft:"0px",fontWeight: "600",color:"#696969c4"}}>
+       <Typography variant="p" sx={{ fontSize: "12px",  paddingLeft:"0px",fontWeight: "600",color:"#787a81"}}>
        Poster design
        </Typography>
        </Grid>
    
        <Grid item xs={2} >            
-       <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px", fontWeight: "600", color:"#696969c4"}}>
+       <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px", fontWeight: "600", color:"#787a81"}}>
         Others
        </Typography>
        </Grid>
@@ -136,8 +136,8 @@ export default function Timesheet(){
        fontSize:"13px",
        fontFamily:"Poppins,san-serif",
        fontWeight:"550",
-       color:"#516ed9bf",
-       backgroundColor:"#e0e8fc57",
+       color:"#556ee6",
+       backgroundColor:"#eef1ff",
        border:"0px",
        boxShadow:"none"}}
        alignItems= "flex-start !important" >Edit</Button>
@@ -163,7 +163,7 @@ export default function Timesheet(){
         <Grid item xs={8}></Grid>
 
        <Box sx={{my:"10px"}}>
-       <Typography variant="p" sx={{ color:"#696969", fontSize:"11.5px"}}>
+       <Typography variant="p" sx={{ color:"#787a81", fontSize:"11.5px"}}>
            Updated the design system components with the new brand guidelines and added few more components
        </Typography>
        </Box>
@@ -178,25 +178,25 @@ export default function Timesheet(){
        <Grid container spacing={2} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
        
        <Grid item xs={2} >            
-       <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px",fontWeight: "600",color:"#696969c4"}}>
+       <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px",fontWeight: "600",color:"#787a81"}}>
        3:00 pm - 4:00 pm
        </Typography>
        </Grid>
    
        <Grid item xs={2} >            
-       <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px", fontWeight: "600",color:"#696969c4"}}>
+       <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px", fontWeight: "600",color:"#787a81"}}>
        19 Mar 2024
        </Typography>
        </Grid>
    
        <Grid item xs={3} >            
-       <Typography variant="p" sx={{ fontSize: "12px",  paddingLeft:"0px",fontWeight: "600",color:"#696969c4"}}>
+       <Typography variant="p" sx={{ fontSize: "12px",  paddingLeft:"0px",fontWeight: "600",color:"#787a81"}}>
        Poster design
        </Typography>
        </Grid>
    
        <Grid item xs={2} >            
-       <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px", fontWeight: "600", color:"#696969c4"}}>
+       <Typography variant="p" sx={{ fontSize: "12px", paddingLeft:"0px", fontWeight: "600", color:"#787a81"}}>
         Others
        </Typography>
        </Grid>
@@ -208,8 +208,8 @@ export default function Timesheet(){
        fontSize:"13px",
        fontFamily:"Poppins,san-serif",
        fontWeight:"550",
-       color:"#516ed9bf",
-       backgroundColor:"#e0e8fc57",
+       color:"#556ee6",
+       backgroundColor:"#eef1ff",
        border:"0px",
        boxShadow:"none"}}
        alignItems= "flex-start !important" >Edit</Button>
@@ -235,7 +235,7 @@ export default function Timesheet(){
         <Grid item xs={8}></Grid>
 
        <Box sx={{my:"10px"}}>
-       <Typography variant="p" sx={{ color:"#696969", fontSize:"11.5px"}}>
+       <Typography variant="p" sx={{ color:"#787a81", fontSize:"11.5px"}}>
            Updated the design system components with the new brand guidelines and added few more components
        </Typography>
        </Box>

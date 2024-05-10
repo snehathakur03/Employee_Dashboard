@@ -36,13 +36,14 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       {
-        path: "/", 
-        element: <Employeedashboard />, 
-      },
-      {
-        path: "groups",
+        path: "/",
         element: <Teammembers />,
       },
+      {
+        path: "/analytics", 
+        element: <Employeedashboard />, 
+      },
+     
       {
         path: "calender",
         element: <Calender />,

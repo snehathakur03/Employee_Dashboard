@@ -9,12 +9,12 @@ const ListItemName = styled(ListItemText) (({theme}) => ({
   '.MuiListItemText-primary': {
     fontSize: '13px', 
     fontWeight: '600', 
-    color:'#686868'
+    color:'#151724'
   },
 
   '.MuiListItemText-secondary': {
     fontSize: '12px', 
-    color: '#8c8c8c'
+    color: '#787a81'
   },
 }))
 
@@ -48,7 +48,7 @@ export default function Calender() {
     <List>
     <ListItem  sx={{paddingLeft:"0px !important"}}>
       <ListItemAvatar>
-          <CakeOutlined sx={{fontSize:"1.8rem", color:"#516ed9bf"}}/>
+          <CakeOutlined sx={{fontSize:"1.8rem", color:"#556ee6"}}/>
       </ListItemAvatar>
       <ListItemName primary="Krystal's birthday" secondary="13 Jan, 2024" />
       </ListItem>
@@ -57,7 +57,7 @@ export default function Calender() {
 
       <ListItem  sx={{paddingLeft:"0px !important"}}>
       <ListItemAvatar>
-          <CakeOutlined  sx={{fontSize:"1.8rem", color:"#516ed9bf"}}/>
+          <CakeOutlined  sx={{fontSize:"1.8rem", color:"#556ee6"}}/>
       </ListItemAvatar>
       <ListItemName primary="Clive's birthday" secondary="28 Nov, 2024" />
       </ListItem>
@@ -66,7 +66,7 @@ export default function Calender() {
 
       <ListItem  sx={{paddingLeft:"0px !important"}}>
       <ListItemAvatar>
-          <WorkHistoryOutlined  sx={{fontSize:"1.8rem", color:"#516ed9bf"}}/>
+          <WorkHistoryOutlined  sx={{fontSize:"1.8rem", color:"#556ee6"}}/>
       </ListItemAvatar>
       <ListItemName primary="Dwen's work anniversary" secondary="10 Dec, 2024" />
       </ListItem>

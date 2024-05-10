@@ -1,0 +1,25 @@
+primary color - button bg, active links,button text,icon
+Secondory color - icon bg, button bg, 
+others- navigation bar icon bg, text bg
+
+
+#556ee6
+#eef1ff
+#f9fafc
+
+
+black font  #151724
+grey font #787a81
+light font #a8acb8
+
+
+  sx={{
+                fontSize: "14px", 
+                textTransform: "capitalize", 
+                color: selectedTab === "Leaves" ? "#556ee6" : "#787a81",
+                '&:hover': {
+                    bgcolor: 'transparent !important' // Remove hover background color
+                  }
+            }}	
+
+9588451121

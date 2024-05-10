@@ -17,35 +17,41 @@ export default function Activity() {
          <Box paddingLeft={4} paddingRight={4} flex={4} bgcolor={"#edecec57"} width="100%" height="100vh" >
 
         <Box padding={"16px 0px"} width={"100%"} display="flex">
-        <Grid container alignItems="center">
-        <Grid item xs>
+        <Grid container alignItems="center" spacing={2}>
+        <Grid item>
         <Typography  fontWeight={700} fontSize={19} variant="p">
             My Activity
         </Typography>
         </Grid>
 
-        <Grid item xs>
+        <Grid item>
         <Button 
             variant="text" 
             onClick={() => handleTabClick('Leaves')}
             sx={{
                 fontSize: "14px", 
                 textTransform: "capitalize", 
-                color: selectedTab === "Leaves" ? "#0000ff" : "#516ed9bf"
+                color: selectedTab === "Leaves" ? "#556ee6" : "#787a81",
+                '&:hover': {
+                    bgcolor: 'transparent !important'
+                  }
             }}
         >
             Leaves
         </Button>
     </Grid>
 
-    <Grid item xs>
+    <Grid item>
         <Button 
             variant="text" 
             onClick={() => handleTabClick('Timesheet')} 
             sx={{
                 fontSize: "14px", 
                 textTransform: "capitalize", 
-                color: selectedTab === "Timesheet" ? "#0000ff" : "#737373"
+                color: selectedTab === "Timesheet" ? "#556ee6" : "#787a81",
+                '&:hover': {
+                    bgcolor: 'transparent !important'
+                  }
             }}
         >
             Work Log/Timesheet

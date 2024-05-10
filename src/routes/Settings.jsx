@@ -89,14 +89,14 @@ export default function UserSetting() {
           <Grid container spacing={3}>
             <Grid item xs={3}>
               <Box display="flex" flexDirection="column" alignItems="center" >
-                <Avatar src={selectedAvatar} sx={{ bgcolor: "transparent", width: "150px", height: "150px", backgroundColor: "#ececec" }}>
-                  {selectedAvatar ? null : <PersonOutlineOutlined sx={{ fontSize: "4.5rem", color: "#516ed9bf" }} />}
+                <Avatar src={selectedAvatar} sx={{ bgcolor: "transparent", width: "150px", height: "150px", backgroundColor: "#eef1ff" }}>
+                  {selectedAvatar ? null : <PersonOutlineOutlined sx={{ fontSize: "4.5rem", color: "#556ee6" }} />}
                 </Avatar>
                 <Box sx={{ marginTop: "12px" }}>
-                  <Button variant="text" onClick={handleClickOpen} sx={{ color: "#516ed9", textTransform: "capitalize", fontWeight: "550", width: "100px" }}>Edit Avatar</Button>
+                  <Button variant="text" onClick={handleClickOpen} sx={{ color: "#556ee6", textTransform: "capitalize", fontWeight: "550", width: "100px",'&:hover':{bgcolor:'transparent !important' }}}>Edit Avatar</Button>
                 </Box>
                 {selectedAvatar && (
-                  <Button variant="text" onClick={handleRemoveAvatar} sx={{ color: "#de275c", textTransform: "capitalize", fontWeight: "550", width: "170px" }}>Remove Avatar</Button>
+                  <Button variant="text" onClick={handleRemoveAvatar} sx={{ color: "#de275c", textTransform: "capitalize", fontWeight: "550", width: "170px",'&:hover':{bgcolor:'transparent !important' } }}>Remove Avatar</Button>
                 )}
               </Box>
             </Grid>
@@ -143,10 +143,11 @@ export default function UserSetting() {
     sx={{
         textTransform:"capitalize",
         fontSize: '13px',
-        color: '#516ed9bf',
+        color: '#556ee6',
         padding: "7.5px 14px",
         width:"80px !important",
-        fontWeight:"600"
+        fontWeight:"600",
+        borderColor:"#a8acb8"
     }}>Verify</Button>
     <br />
 
@@ -192,8 +193,8 @@ export default function UserSetting() {
                       </Box>
 
               <Stack direction="row" sx={{ marginLeft: '68%', marginTop: "70px" }}>
-                <Button variant="text" sx={{ color: "#516ed9", textTransform: "capitalize", fontWeight: "600", width: "100px" }}>Cancel</Button>
-                <Button variant="contained" sx={{ backgroundColor: "#516ed9", boxShadow: "none", textTransform: "capitalize", fontWeight: "500", width: "100px" }}>Save</Button>
+                <Button variant="text" sx={{ color: "#516ed9", textTransform: "capitalize", fontWeight: "600", width: "100px" ,'&:hover':{bgcolor:'transparent !important' }}}>Cancel</Button>
+                <Button variant="contained" sx={{ backgroundColor: "#556ee6", boxShadow: "none", textTransform: "capitalize", fontWeight: "500", width: "100px" }}>Save</Button>
               </Stack>
             </Grid>
           </Grid>
@@ -259,7 +260,7 @@ export default function UserSetting() {
 
         </DialogContent>
         <Box sx={{ display: 'flex', justifyContent: 'center',paddingBottom:"15PX" }}>
-          <Button sx={{ color: "#516ed9", textTransform: "capitalize", fontWeight: "600", width: "100px", fontSize: "15px" }} autoFocus onClick={handleClose}>
+          <Button sx={{ color: "#556ee6", textTransform: "capitalize", fontWeight: "600", width: "100px", fontSize: "15px" }} autoFocus onClick={handleClose}>
             Cancel
           </Button>
           </Box>

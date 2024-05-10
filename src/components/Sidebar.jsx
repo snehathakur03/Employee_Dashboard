@@ -2,19 +2,18 @@ import React from "react";
 import {GroupOutlined,AccessTimeOutlined, CalendarTodayOutlined, SettingsOutlined, ShowChartOutlined} from "@mui/icons-material";
 
 export const Sidebar = [
-    {
-        title: "",
-        path: "/",
-        icon: <ShowChartOutlined />,
-        cName: "nav-text",
-      },
-    {
+  {
     title: "",
-    path: "/groups",
+    path: "/",
     icon: <GroupOutlined />,
     cName: "nav-text",
   },
- 
+    {
+        title: "",
+        path: "/analytics",
+        icon: <ShowChartOutlined />,
+        cName: "nav-text",
+      },
   {
     title: "",
     path: "/calender",

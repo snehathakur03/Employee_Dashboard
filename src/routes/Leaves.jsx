@@ -68,8 +68,8 @@ function createData(
      
         <Grid container spacing={2}>
         <Grid item xs={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Box sx={{ borderRadius: "15px", width: "60px", height: "60px", backgroundColor: "#e3e3e3a6", display: "flex", alignItems: "center", justifyContent: "center" }}> 
-                <Typography variant="p" sx={{ color: "#516ed9bf", fontWeight: "600", fontSize: "17px" }}>16</Typography>
+            <Box sx={{ borderRadius: "15px", width: "60px", height: "60px", backgroundColor: "#eef1ff", display: "flex", alignItems: "center", justifyContent: "center" }}> 
+                <Typography variant="p" sx={{ color: "#556ee6", fontWeight: "600", fontSize: "17px" }}>16</Typography>
             </Box>
         </Grid>
         <Grid item xs={7} sx={{ display: "flex", alignItems: "center" }}>
@@ -89,8 +89,8 @@ function createData(
       
         <Grid container spacing={2}>
         <Grid item xs={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Box sx={{ borderRadius: "15px", width: "60px", height: "60px", backgroundColor: "#e3e3e3a6", display: "flex", alignItems: "center", justifyContent: "center" }}> 
-                <Typography variant="p" sx={{ color: "#516ed9bf", fontWeight: "600", fontSize: "17px" }}>10</Typography>
+            <Box sx={{ borderRadius: "15px", width: "60px", height: "60px", backgroundColor: "#eef1ff", display: "flex", alignItems: "center", justifyContent: "center" }}> 
+                <Typography variant="p" sx={{ color: "#556ee6", fontWeight: "600", fontSize: "17px" }}>10</Typography>
             </Box>
         </Grid>
         <Grid item xs={7} sx={{ display: "flex", alignItems: "center" }}>
@@ -164,13 +164,16 @@ function createData(
             <Button variant="text" 
             sx={{ textTransform:"none",
             fontSize:"13px",
-            fontFamily:"Poppins,san-serif"}}
+            fontFamily:"Poppins,san-serif",
+            color:"#556ee6"}}
             alignItems= "flex-start !important" >Apply leave</Button>
 
             <Button variant="outlined" 
             sx={{ textTransform:"none",
             fontSize:"13px",
-            fontFamily:"Poppins,san-serif"}}
+            fontFamily:"Poppins,san-serif",
+            color:"#556ee6",
+            borderColor:"#a8acb8"}}
             alignItems= "flex-start !important" >Apply on duty</Button>
             </Grid>
             </Grid>
@@ -192,13 +195,14 @@ function createData(
     <Button variant="text" 
     sx={{ textTransform:"none",
     fontSize:"13px",
-    fontFamily:"Poppins,san-serif"}}
+    fontFamily:"Poppins,san-serif",color:"#556ee6"}}
     alignItems= "flex-start !important" >Read leave policy</Button>
 
     <Button variant="outlined" 
     sx={{ textTransform:"none",
     fontSize:"13px",
-    fontFamily:"Poppins,san-serif"}}
+    fontFamily:"Poppins,san-serif",color:"#556ee6", 
+    borderColor:"#a8acb8"}}
     alignItems= "flex-start !important" >Apply leave</Button>
     </Grid>
     </Grid>
@@ -245,7 +249,7 @@ function createData(
             sx={{ textTransform:"none",
             fontSize:"13px",
             fontFamily:"Poppins,san-serif",
-            backgroundColor:"#516ed9bf",
+            backgroundColor:"#556ee6",
             color:"white"}}
             alignItems= "flex-start !important" >Apply Leave</Button>
             </Grid>
@@ -255,7 +259,7 @@ function createData(
             <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
-                <TableRow  sx={{bgcolor:"#ecececde", height:"40px"}}>
+                <TableRow  sx={{bgcolor:"#ecececde", height:"40px",color:"#787a81"}}>
                     <TableCell sx={{ borderRadius: "10px" ,border:"5px solid white" }}>Srno</TableCell>
                     <TableCell align="left" sx={{ borderRadius: "15px" , border:"5px solid white" }}>Type</TableCell>
                     <TableCell align="left"  sx={{ borderRadius: "15px", border:"5px solid white"   }}>From</TableCell>

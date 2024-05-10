@@ -1,6 +1,6 @@
 import React from "react";
 import { styled, alpha } from '@mui/material/styles';
-import {Box,InputBase , Divider, Stack, Typography, useTheme, useMediaQuery, IconButton,TablePagination , Icon, Button, Chip,Avatar,TableContainer,Paper,Table,TableHead,TableRow,TableCell,TableBody} from "@mui/material";
+import {Box,Grid,InputBase , Divider, Stack, Typography, useTheme, useMediaQuery, IconButton,TablePagination , Icon, Button, Chip,Avatar,TableContainer,Paper,Table,TableHead,TableRow,TableCell,TableBody} from "@mui/material";
 import { ChatBubbleOutline, ErrorOutline, FreeBreakfastOutlined, HourglassBottom, KeyboardArrowDown , ShortcutOutlined, SouthOutlined } from "@mui/icons-material";
 import SearchIcon from '@mui/icons-material/Search';
 import {Dropdown, MenuButton,Menu,MenuItem} from '@mui/joy';
@@ -103,7 +103,7 @@ function createData(
 
     return(
         <>
-        <Box paddingLeft={4} paddingRight={4} flex={4} bgcolor={"#edecec57"} width="100%" >
+        <Box paddingLeft={4} paddingRight={4} flex={4} bgcolor={"#edecec57"} height="auto" >
 
         <Box padding={"16px 0px"} width={"100%"}>
         <Typography  fontWeight={700} fontSize={19} variant="p">
@@ -111,13 +111,17 @@ function createData(
         </Typography>
         </Box>
         <Divider />
+
         
-        <Box marginTop="15px">
-        <Stack direction = "row"  justifyContent="space-between" marginTop = {isXsOrSmScreen ?"15px":"0px"}  >
-                <Typography variant="p"  fontSize={14} fontWeight={600} color={"#666666"}> Team Stats</Typography>
-               <Box>
-                <Dropdown>
-                <MenuButton sx={{padding:"0px", border:"0px", color:"#666666", fontWeight:"600" , alignItems: "flex-start !important" }}>Daywise
+        <Grid container  marginTop="15px" spacing={3}>
+
+        <Grid item xs={6}>
+        <Typography variant="h6"  fontSize={14} fontWeight="600" color="#787a81"> Team Stats</Typography>
+        </Grid>
+
+        <Grid item xs={6}  display="flex" justifyContent="flex-end">
+        <Dropdown>
+                <MenuButton sx={{padding:"0px", border:"0px", color:"#787a81", fontWeight:"550" , alignItems: "flex-start !important" }}>Daywise
                 <IconButton sx={{ alignItems: "flex-start !important" , padding:"0px"}}>
                     <KeyboardArrowDown sx={{color:"#898989",  alignItems: "flex-start !important"  }}/>
                     </IconButton>
@@ -128,103 +132,101 @@ function createData(
                     <MenuItem>Yearly</MenuItem>
                 </Menu>
                 </Dropdown>
-                </Box>
-            </Stack>
+          </Grid>
+        </Grid>
 
-        <Stack  direction={isXsOrSmScreen ? 'column' : 'row'}
-                justifyContent="space-between"
-                spacing={3} 
-                sx={{ display: { xs: 'block', sm: 'block', md: 'flex' } }}>
 
-            <Box flex="2" >
-            <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
-            <Box sx={{display:"flex", height:"100px",  alignItems: "center", justifyContent: "center" }}>
-                        <Stack direction="column">
-                        <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}>9:16 AM
-                        </Typography>
-                        <Typography variant="h7" fontSize="14px" fontWeight={500} letterSpacing={0.9} marginTop={1} color="#6f6f6f">Teams's Average in time
-                        </Typography>
-                        </Stack>
+        <Grid container spacing={2} >
+            <Grid item xs={3} >
+            <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px",boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+            <Grid container height="80px" alignItems="center" justifyContent="center"> 
+                <Grid item xs={6} textAlign="center">  
+                    <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}  style={{ textAlign: "left" }}>9:16 AM
+                    </Typography>
+                    <Typography variant="h6" fontSize="14px" fontWeight={500} letterSpacing={0.9} marginTop={1} color="#787a81"  style={{ textAlign: "left" }}>Today's in time
+                    </Typography>
+                </Grid>
 
-                        <Box flex={0.6}></Box>
-                        <Box width={isXsOrSmScreen ? "100px":"55px" } sx={{ height:"55px", bgcolor:"#e9ecf5",textAlign:"center", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <SouthOutlined color="primary"/>
-                        </Box>
+                <Grid item xs={6} justifyContent="flex-end" display="flex">
+                    <Box sx={{width:"55px", height:"55px", bgcolor:"#eef1ff", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <SouthOutlined sx={{color:"#556ee6"}}/>
                     </Box>
+                </Grid>
+            </Grid>
             </Box>
-            </Box>
+            </Grid>
 
-            <Box flex="2" >
-             <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
-            <Box sx={{display:"flex", height:"100px",  alignItems: "center", justifyContent: "center" }}>
-                        <Stack direction="column">
-                        <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}>45 m
-                        </Typography>
-                        <Typography variant="h7" fontSize="14px" fontWeight={500} letterSpacing={0.9} marginTop={1} color="#6f6f6f">Teams's Average Break Time
-                        </Typography>
-                        </Stack>
+            <Grid item xs={3} >
+            <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+            <Grid container height="80px" alignItems="center" justifyContent="center"> 
+                <Grid item xs={6} textAlign="center">  
+                    <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}  style={{ textAlign: "left" }}>45 m
+                    </Typography>
+                    <Typography variant="h6" fontSize="14px" fontWeight={500} letterSpacing={0.9} marginTop={1} color="#787a81"  style={{ textAlign: "left" }}>Teams's Average Break Time
+                    </Typography>
+                </Grid>
 
-                        <Box flex={0.6}></Box>
-                        <Box width={isXsOrSmScreen ? "100px":"55px" } sx={{ height:"55px", bgcolor:"#e9ecf5",textAlign:"center", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <FreeBreakfastOutlined color="primary"/>
-                        </Box>
+                <Grid item xs={6} justifyContent="flex-end" display="flex">
+                    <Box sx={{width:"55px", height:"55px", bgcolor:"#eef1ff", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <FreeBreakfastOutlined sx={{color:"#556ee6"}}/>
                     </Box>
+                </Grid>
+            </Grid>
             </Box>
-            </Box>
+             </Grid>
 
-            <Box flex="2">
-            <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
-            <Box sx={{display:"flex", height:"100px",  alignItems: "center", justifyContent: "center" }}>
-                        <Stack direction="column">
-                        <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}>4h 23m
-                        </Typography>
-                        <Typography variant="h7" fontSize="14px" fontWeight={500} letterSpacing={0.9} marginTop={1} color="#6f6f6f">Teams's Average Work time
-                        </Typography>
-                        </Stack>
+            <Grid item xs={3} >
+            <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px",boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+            <Grid container height="80px"  alignItems="center" justifyContent="center"> 
+                <Grid item xs={6} textAlign="center">  
+                    <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}  style={{ textAlign: "left" }}>4 h 23 m
+                    </Typography>
+                    <Typography variant="h6" fontSize="14px" fontWeight={500} letterSpacing={0.9} marginTop={1} color="#787a81"  style={{ textAlign: "left" }}>Teams's Average Work time
+                    </Typography>
+                </Grid>
 
-                        <Box flex={0.6}></Box>
-                        <Box width={isXsOrSmScreen ? "100px":"55px" } sx={{ height:"55px", bgcolor:"#e9ecf5",textAlign:"center", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <HourglassBottom color="primary"/>
-                        </Box>
+                <Grid item xs={6} justifyContent="flex-end" display="flex">
+                    <Box sx={{width:"55px", height:"55px", bgcolor:"#eef1ff", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <HourglassBottom sx={{color:"#556ee6"}}/>
                     </Box>
+                </Grid>
+            </Grid>
             </Box>
-            </Box>
+            </Grid>
 
-            <Box flex="2">
-            <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
-            <Box sx={{display:"flex", height:"100px",  alignItems: "center", justifyContent: "center" }}>
-                        <Stack direction="column">
-                        <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}>-
-                        </Typography>
-                        <Typography variant="h7" fontSize="14px" fontWeight={500} letterSpacing={0.9} marginTop={1} color="#6f6f6f">Teams's Average Out time
-                        </Typography>
-                        </Stack>
+            <Grid item xs={3} >
+            <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+            <Grid container height="80px"  alignItems="center" justifyContent="center"> 
+                <Grid item xs={6} textAlign="center">  
+                    <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}  style={{ textAlign: "left" }}>-
+                    </Typography>
+                    <Typography variant="h6" fontSize="14px" fontWeight={500} letterSpacing={0.9} marginTop={1} color="#787a81"  style={{ textAlign: "left" }}>Teams's Average Out time
+                    </Typography>
+                </Grid>
 
-                        <Box flex={0.6}></Box>
-                        <Box width={isXsOrSmScreen ? "100px":"55px" } sx={{ height:"55px", bgcolor:"#e9ecf5",textAlign:"center", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <ShortcutOutlined color="primary"/>
-                        </Box>
+                <Grid item xs={6} justifyContent="flex-end" display="flex">
+                    <Box sx={{width:"55px", height:"55px", bgcolor:"#eef1ff", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <ShortcutOutlined sx={{color:"#556ee6"}}/>
                     </Box>
+                </Grid>
+            </Grid>
             </Box>
-            </Box>
-        </Stack>
-        </Box>
-        <br />
-
-
-        <Box sx={{ 
-            bgcolor: "#fff",
-            borderRadius: "15px",
-            padding: "20px",
-            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-            display: "flex",
-            alignItems: "center", 
-
-            }}>  
+            </Grid>
+        </Grid>  
+      
+          <Box sx={{ 
+          bgcolor: "#fff",
+          borderRadius: "15px",
+          padding: "13px",
+          boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+          display: "flex",
+          alignItems: "center", 
+          marginTop:"30px"
+          }}>  
 
         <Stack direction= {isXsOrSmScreen ? "column":"row"} justifyContent="space-between" spacing= {isXsOrSmScreen ? "0px":"460px"}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Icon><ErrorOutline color="primary"/></Icon>
+            <Icon><ErrorOutline sx={{color:"#556ee6"}}/></Icon>
                 
             <Typography variant="p" sx={{ fontSize: "13px", fontWeight: "600", marginLeft: "10px" }}>
             Wade Warren was absent on 12th December 2023 without any intimation.
@@ -233,152 +235,174 @@ function createData(
             
             <Button variant="outlined" 
             sx={{ textTransform:"none",
-            fontFamily:"Poppins,san-serif"}}
+            fontFamily:"Poppins,san-serif",color:"556ee6", borderColor:"#c4ceff"}}
             alignItems= "flex-start !important" >Send Reminder</Button>
             </Stack>
             </Box>
-            {/* <br/> */}
 
-            <Stack direction="row" marginTop={2} justifyContent="space-between" spacing={5}>
-                <Box flex={6} >
-                <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
-                    <Stack direction="row">
-                    <Box flex={6} >
-                    <Chip 
-                        avatar={<Avatar alt="Natacha" src="https://static.vecteezy.com/system/resources/thumbnails/001/993/889/small_2x/beautiful-latin-woman-avatar-character-icon-free-vector.jpg" 
-                        style={{ width: '50px', height: '50px' }} />}
-                        label={
-                        <>
-                        <h4>Johny Wilson</h4>
-                        <p>UI/UX Designer</p>
-                        </> 
-                        }
-                        style={{ backgroundColor: 'transparent' }} 
+
+            <Grid container spacing={3}  marginTop={-0.6}>
+
+              <Grid item xs={6}>
+              <Box sx={{bgcolor:"#fff",borderRadius:"15px", padding:"20px",  marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+
+                <Grid container>
+                <Grid item xs={6} >
+                <Chip 
+                    avatar={<Avatar alt="Natacha" src="https://static.vecteezy.com/system/resources/thumbnails/001/993/889/small_2x/beautiful-latin-woman-avatar-character-icon-free-vector.jpg" 
+                    style={{ width: '50px', height: '50px' }} />}
+                    label={
+                    <>
+                    <h4>Johny Wilson</h4>
+                    <Typography variant="p" sx={{color:"#848a9b"}}>UI/UX Designer</Typography>
+                    </> 
+                    }
+                    style={{ backgroundColor: 'transparent' }} 
                     />
-                    <br/>   <br/>
-                    <Typography variant="p" fontSize="15px" fontWeight={450}>Friend's Wedding Celebration </Typography>
-                    </Box>
+                <br /><br />
+                <Typography variant="p" fontSize="15px" fontWeight={450}>Friend's Wedding Celebration </Typography>
 
+                </Grid>
 
-                    <Box flex={6} height="100px">
-                        
-                    <Stack direction="row">
-                        <Box flex={2} ></Box>
+                <Grid item xs={6}>
+                  <Stack direction="row">
+                      <Box flex={2} ></Box>
+                      <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#f9fafc",fontSize:"12px",color:"#556ee6", borderRadius:"20px",fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>Casual</Button></Box>
+                      <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#f9fafc",color:"#556ee6",fontSize:"12px", borderRadius:"20px", fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>2 Days</Button></Box>
+                  </Stack>
+                </Grid>
+    
+                </Grid>
 
-                        <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#eeeeee5e",fontSize:"12px",color:"#1976d2", borderRadius:"20px",fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>Casual</Button></Box>
-                        <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#eeeeee5e",color:"#1976d2",fontSize:"12px", borderRadius:"20px", fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>2 Days</Button></Box>
-                        </Stack>
-                    </Box>
-                    </Stack>
+                <Grid container alignItems="center">
+                <Grid item xs={6}>
+                  <Typography variant="p"fontSize="12px" fontWeight={450} color="#848a9b">10 April 2023 - 11 April 2023</Typography>
+                </Grid>
 
-                    <Stack direction="row">
-                        <Box flex={6}><Typography variant="p"fontSize="12px" fontWeight={450} color="grey">10 April 2023 - 11 April 2023</Typography></Box>
-                        <Box flex={2} > <Icon style={{color:"#52a9ff" }}><ChatBubbleOutline /> </Icon> </Box>
-                        <Box flex={2} ><Button variant="text" style={{textTransform:"none",fontFamily: 'inherit',fontWeight:"450" }}>Deny</Button></Box>
-                        <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#ecececa6",color:"#1976d2", fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>Approve</Button></Box>
-
-                    </Stack>
-                </Box>
-
-                </Box>
-
-                <Box flex={6} >
-                <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+                <Grid item xs={6}>
                     
                 <Stack direction="row">
-                    <Box flex={6} >
-                    <Chip 
+                    <Box flex={2} display="flex" alignItems="center" justifyContent="center"> <Icon style={{color:"#556ee6" }}><ChatBubbleOutline /> </Icon> </Box>
+                    <Box flex={2} ><Button variant="text" style={{textTransform:"none",fontFamily: 'inherit',fontWeight:"450" ,color:"#556ee6"}}>Deny</Button></Box>
+                    <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#eef1ff",color:"#556ee6", fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>Approve</Button></Box>
+                    </Stack>
+                </Grid>
+    
+                </Grid>
+ 
+              </Box>
+              </Grid>
+
+              <Grid item xs={6}>
+              <Box sx={{bgcolor:"#fff",borderRadius:"15px", padding:"20px",marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+                  
+              <Grid container>
+                <Grid item xs={6} >
+                <Chip 
                         avatar={<Avatar alt="Natacha" src="https://static.vecteezy.com/system/resources/thumbnails/001/993/889/small_2x/beautiful-latin-woman-avatar-character-icon-free-vector.jpg" 
                         style={{ width: '50px', height: '50px' }} />}
-                        label={
-                        <>
+                    label={
+                    <>
                         <h4>David Kail</h4>
-                        <p>UI/UX Designer</p>
-                        </> 
-                        }
-                        style={{ backgroundColor: 'transparent' }} 
+                    <Typography variant="p" sx={{color:"#848a9b"}}>UI/UX Designer</Typography>
+                    </> 
+                    }
+                    style={{ backgroundColor: 'transparent' }} 
                     />
-                    <br/>   <br/>
-                    <Typography variant="p" fontSize="15px" fontWeight={450}>Personal Work</Typography>
-                    </Box>
+                <br /><br />
+                <Typography variant="p" fontSize="15px" fontWeight={450}>Personal Work</Typography>
 
+                </Grid>
 
-                    <Box flex={6} height="100px">
-                        
-                    <Stack direction="row">
-                        <Box flex={2} ></Box>
+                <Grid item xs={6}>
+                  <Stack direction="row">
+                      <Box flex={2} ></Box>
+                      <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#f9fafc",fontSize:"12px",color:"#556ee6", borderRadius:"20px",fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>Casual</Button></Box>
+                      <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#f9fafc",color:"#556ee6",fontSize:"12px", borderRadius:"20px", fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>2 Days</Button></Box>
+                  </Stack>
+                </Grid>
+    
+                </Grid>
 
-                        <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#eeeeee5e",fontSize:"12px",color:"#1976d2", borderRadius:"20px",fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>Casual</Button></Box>
-                        <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#eeeeee5e",color:"#1976d2",fontSize:"12px", borderRadius:"20px", fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>2 Days</Button></Box>
-                        </Stack>
-                    </Box>
+                <Grid container alignItems="center">
+                <Grid item xs={6}>
+                  <Typography variant="p"fontSize="12px" fontWeight={450} color="#848a9b">10 April 2023 - 11 April 2023</Typography>
+                </Grid>
+
+                <Grid item xs={6}>
+                    
+                <Stack direction="row">
+                    <Box flex={2} display="flex" alignItems="center" justifyContent="center"> <Icon style={{color:"#556ee6" }}><ChatBubbleOutline /> </Icon> </Box>
+                    <Box flex={2} ><Button variant="text" style={{textTransform:"none",fontFamily: 'inherit',fontWeight:"450" ,color:"#556ee6"}}>Deny</Button></Box>
+                    <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#eef1ff",color:"#556ee6", fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>Approve</Button></Box>
                     </Stack>
+                </Grid>
+    
+                </Grid>
+ 
+              </Box>
+              </Grid>
 
-                    <Stack direction="row">
-                        <Box flex={6}><Typography variant="p"fontSize="12px" fontWeight={450} color="grey">13 Marcg 2023 - 14 March 2023</Typography></Box>
-                        <Box flex={2} > <Icon style={{color:"#52a9ff" }}><ChatBubbleOutline /> </Icon> </Box>
-                        <Box flex={2} ><Button variant="text" style={{textTransform:"none",fontFamily: 'inherit',fontWeight:"450" }}>Deny</Button></Box>
-                        <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#ecececa6",color:"#1976d2", fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>Approve</Button></Box>
+            </Grid>
 
-                    </Stack>
-
-                </Box>
-
-                </Box>
-                
-            </Stack>
-
-
-            <Stack direction="row" marginTop={2} justifyContent="space-between" spacing={5}>
-                <Box flex={6} >
-                <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
-                    <Stack direction="row">
-                    <Box flex={6} >
-                    <Chip 
-                        avatar={<Avatar alt="Natacha" src="https://static.vecteezy.com/system/resources/thumbnails/001/993/889/small_2x/beautiful-latin-woman-avatar-character-icon-free-vector.jpg" 
-                        style={{ width: '50px', height: '50px' }} />}
-                        label={
-                        <>
-                        <h4>Kevin lyn</h4>
-                        <p>UX Researcher</p>
-                        </> 
-                        }
-                        style={{ backgroundColor: 'transparent' }} 
-                    />
-                    <br/>   <br/>
-                    <Typography variant="p" fontSize="15px" fontWeight={450}>Vacation </Typography>
-                    </Box>
-
-
-                    <Box flex={6} height="100px">
-                        
-                    <Stack direction="row">
-                        <Box flex={2} ></Box>
-
-                        <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#eeeeee5e",fontSize:"12px",color:"#1976d2", borderRadius:"20px",fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>Casual</Button></Box>
-                        <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#eeeeee5e",color:"#1976d2",fontSize:"12px", borderRadius:"20px", fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>4 Days</Button></Box>
-                        </Stack>
-                    </Box>
-                    </Stack>
-
-                    <Stack direction="row">
-                        <Box flex={6}><Typography variant="p"fontSize="12px" fontWeight={450} color="grey">15 May 2023 - 19 May 2023</Typography></Box>
-                        <Box flex={2} > <Icon style={{color:"#52a9ff" }}><ChatBubbleOutline /> </Icon> </Box>
-                        <Box flex={2} ><Button variant="text" style={{textTransform:"none",fontFamily: 'inherit',fontWeight:"450" }}>Deny</Button></Box>
-                        <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#ecececa6",color:"#1976d2", fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>Approve</Button></Box>
-
-                    </Stack>
-                </Box>
-
-                </Box>
-
-                <Box flex={6} >
             
-                </Box>
+            <Grid container spacing={3} marginTop={-0.6}>
 
-            </Stack>
+              <Grid item xs={6}>
+              <Box sx={{bgcolor:"#fff",borderRadius:"15px", padding:"20px",  marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
 
-            <Box>
+                <Grid container>
+                <Grid item xs={6} >
+                <Chip 
+                      avatar={<Avatar alt="Natacha" src="https://static.vecteezy.com/system/resources/thumbnails/001/993/889/small_2x/beautiful-latin-woman-avatar-character-icon-free-vector.jpg" 
+                      style={{ width: '50px', height: '50px' }} />}
+                    label={
+                    <>
+                      <h4>Kevin lyn</h4>
+                      <Typography variant="p" sx={{color:"#848a9b"}}>UX Researcher</Typography>
+                    </> 
+                    }
+                    style={{ backgroundColor: 'transparent' }} 
+                    />
+                <br /><br />
+                <Typography variant="p" fontSize="15px" fontWeight={450}>Vacation </Typography>
+
+                </Grid>
+
+                <Grid item xs={6}>
+                  <Stack direction="row">
+                      <Box flex={2} ></Box>
+                      <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#f9fafc",fontSize:"12px",color:"#556ee6", borderRadius:"20px",fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>Casual</Button></Box>
+                      <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#f9fafc",color:"#556ee6",fontSize:"12px", borderRadius:"20px", fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>2 Days</Button></Box>
+                  </Stack>
+                </Grid>
+    
+                </Grid>
+
+                <Grid container alignItems="center">
+                <Grid item xs={6}>
+                  <Typography variant="p"fontSize="12px" fontWeight={450} color="#848a9b">10 April 2023 - 11 April 2023</Typography>
+                </Grid>
+
+                <Grid item xs={6}>
+                    
+                <Stack direction="row">
+                    <Box flex={2} display="flex" alignItems="center" justifyContent="center"> <Icon style={{color:"#556ee6" }}><ChatBubbleOutline /> </Icon> </Box>
+                    <Box flex={2} ><Button variant="text" style={{textTransform:"none",fontFamily: 'inherit',fontWeight:"450" ,color:"#556ee6"}}>Deny</Button></Box>
+                    <Box flex={2}> <Button variant="contained" style={{backgroundColor:"#eef1ff",color:"#556ee6", fontFamily:"inherit", textTransform:"none",boxShadow:"none"}}>Approve</Button></Box>
+                    </Stack>
+                </Grid>
+    
+                </Grid>
+ 
+              </Box>
+              </Grid>
+
+              <Grid item xs={6}></Grid>
+          </Grid>
+
+
+          <Box>
             <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", marginTop:"25px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
            <Typography variant="h6" sx={{fontFamily:"inherit"}}>Team Activity</Typography>
            <br/>
@@ -420,7 +444,7 @@ function createData(
             <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
-                <TableRow  sx={{bgcolor:"#ecececde", height:"40px"}}>
+                <TableRow  sx={{bgcolor:"#eef1ff", height:"40px"}}>
                     <TableCell sx={{ borderRadius: "10px" ,border:"5px solid white" }}>Emp.ID</TableCell>
                     <TableCell align="left"  sx={{ borderRadius: "15px" , border:"5px solid white"  }}>User</TableCell>
                     <TableCell align="left" sx={{ borderRadius: "15px" , border:"5px solid white" }}>In Time</TableCell>
@@ -471,9 +495,6 @@ function createData(
           />
             </Box>
             </Box>
-
-
-
 
         </Box>
         </>
