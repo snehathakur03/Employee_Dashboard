@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
+// import MenuIcon from "@mui/icons-material/Menu";
+// import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
 import { Sidebar } from "./Sidebar";
 import "../App.css";
@@ -40,19 +40,18 @@ function Navbar() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <div className="navbar">
-          {/* Show the MenuIcon only in mobile view */}
+        {/* <div className="navbar">
           <Link to="#" className="menu-bars">
             <MenuIcon onClick={showSidebar} className="mobile-menu-icon" />
           </Link>
-        </div>
-        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+        </div> */}
+        <nav className="nav-menu active"  >
           <ul className="nav-menu-items" onClick={showSidebar}>
-            <li className="navbar-toggle">
+            {/* <li className="navbar-toggle">
               <Link to="#" className="menu-bars">
                 <CloseIcon />
               </Link>
-            </li>
+            </li> */}
             
             <li className="nav-text">
               <Typography variant="h4" fontWeight={"bold"} color={"#556ee6"} >hr</Typography>

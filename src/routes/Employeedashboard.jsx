@@ -13,7 +13,7 @@ function Employeedashboard() {
 
     return (
         <>
-      <Box paddingLeft={4} paddingRight={4} flex={4} bgcolor={"#edecec57"} height="100vh">
+      <Box paddingLeft={4} paddingRight={4} flex={4} bgcolor={"#edecec57"} height="auto">
         <Box padding={"16px 0px"} width={"100%"}>
         <Typography  fontWeight={700} fontSize={19} variant="p">
             Dashboard
@@ -24,22 +24,22 @@ function Employeedashboard() {
 
         <Grid container  marginTop="15px" spacing={3}>
 
-        <Grid item xs={6}>
+        <Grid item sm={12} md={12} lg={6}>
         <Typography variant="h6"  fontSize={14} fontWeight={600} color={"#787a81"}> My Stats</Typography>
 
         <Box sx={{bgcolor:"#fff",borderRadius:"15px",height:"300px", marginTop:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
 
         <Grid container padding="20px 30px 0px 30px" >
-            <Grid item xs={6} >
+            <Grid item sm={6} md={6} lg={6}>
             <Grid container height="100px" alignItems="center" justifyContent="center"> 
-                <Grid item xs={6} textAlign="center">  
+                <Grid item sm={6} textAlign="center">  
                     <Typography variant="h5"  fontWeight={560} letterSpacing={0.9}  style={{ textAlign: "left" }}>9:16 AM
                     </Typography>
-                    <Typography variant="h6" fontSize="14px" fontWeight={500} letterSpacing={0.9} marginTop={1} color="#787a81"  style={{ textAlign: "left" }}>Today's in time
+                    <Typography variant="h6" fontSize="14px" fontWeight={500} letterSpacing={0.9} marginTop={1} color="#787a81"  style={{ textAlign: "left" }}>Teams's Average in time
                     </Typography>
                 </Grid>
 
-                <Grid item xs={6} justifyContent="center" display="flex">
+                <Grid item sm={6} justifyContent="center" display="flex">
                     <Box sx={{width:"55px", height:"55px", bgcolor:"#eef1ff", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <SouthOutlined sx={{color:"#556ee6"}}/>
                     </Box>
@@ -48,17 +48,17 @@ function Employeedashboard() {
             </Grid>
 
 
-            <Grid item xs={6}>
+            <Grid item sm={6} md={6} lg={6}>
 
             <Grid container height="100px" alignItems="center" justifyContent="center"> 
-            <Grid item xs={6} textAlign="center">  
+            <Grid item sm={6} textAlign="center">  
                     <Typography variant="h5"  fontWeight={560} letterSpacing={0.9} style={{ textAlign: "left" }}>45 m
                     </Typography>
                     <Typography variant="h6" fontSize="14px" fontWeight={500} letterSpacing={0.9} marginTop={1} style={{ textAlign: "left" }} color="#787a81">Break Time*
                     </Typography>
                 </Grid>
 
-                <Grid item xs={6} justifyContent="center" display="flex">
+                <Grid item sm={6} justifyContent="center" display="flex">
                     <Box sx={{width:"55px", height:"55px", bgcolor:"#eef1ff",textAlign:"center", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <FreeBreakfastOutlined sx={{color:"#556ee6"}}/>
                     </Box>
@@ -69,17 +69,17 @@ function Employeedashboard() {
         </Grid>
 
         <Grid container  padding="20px 30px 0px 30px"  >
-        <Grid item xs={6}>
+        <Grid item sm={6} md={6} lg={6}>
 
         <Grid container height="100px" alignItems="center" justifyContent="center"> 
-            <Grid item xs={6} textAlign="center">
+            <Grid item sm={6} textAlign="center">
                 <Typography variant="h5"  fontWeight={560} letterSpacing={0.9} style={{ textAlign: "left" }}>4h 23m
                 </Typography>
                 <Typography variant="h6" fontSize="14px" fontWeight={500} letterSpacing={0.9} style={{ textAlign: "left" }} marginTop={1} color="#787a81">Work time*
                 </Typography>
             </Grid>
 
-            <Grid item xs={6} justifyContent="center" display="flex">
+            <Grid item sm={6} justifyContent="center" display="flex">
                 <Box sx={{width:"55px", height:"55px", bgcolor:"#eef1ff",textAlign:"center", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <WorkHistoryOutlined sx={{color:"#556ee6"}}/>
                 </Box>
@@ -88,17 +88,17 @@ function Employeedashboard() {
         </Grid>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item sm={6} md={6} lg={6}>
 
         <Grid container height="100px" alignItems="center" justifyContent="center"> 
-            <Grid item xs={6} textAlign="center">
+            <Grid item sm={6} textAlign="center">
                 <Typography variant="h5"  fontWeight={560} letterSpacing={0.9} style={{ textAlign: "left" }}>3
                 </Typography>
                 <Typography variant="h6" fontSize="14px" fontWeight={500} letterSpacing={0.9} style={{ textAlign: "left" }} marginTop={1} color="#787a81">Tasks In Progress
                 </Typography>
             </Grid>
 
-            <Grid item xs={6} justifyContent="center" display="flex">
+            <Grid item sm={6} justifyContent="center" display="flex">
                 <Box sx={{width:"55px", height:"55px", bgcolor:"#eef1ff",textAlign:"center", borderRadius:"28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <ShortcutOutlined sx={{color:"#556ee6"}}/>
                 </Box>
@@ -128,7 +128,7 @@ function Employeedashboard() {
     
     </Grid>
 
-        <Grid item xs={6} >
+        <Grid item xs={12} md={12} lg={6} >
         <Stack direction = "row"  justifyContent="space-between" marginTop = {isXsOrSmScreen ?"15px":"0px"}  >
             <Typography variant="p"  fontSize={14} fontWeight={600} color={"#787a81"}> Work Hours</Typography>
             <Dropdown>

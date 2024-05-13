@@ -14,7 +14,7 @@ export default function Activity() {
    
     return(
       <>
-         <Box paddingLeft={4} paddingRight={4} flex={4} bgcolor={"#edecec57"} width="100%" height="100vh" >
+         <Box paddingLeft={4} paddingRight={4} flex={4} bgcolor={"#edecec57"} width="100%" height="auto" >
 
         <Box padding={"16px 0px"} width={"100%"} display="flex">
         <Grid container alignItems="center" spacing={2}>

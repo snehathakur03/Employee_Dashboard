@@ -63,16 +63,16 @@ function createData(
         <Box marginTop="15px">
         <Grid container spacing={3}>
       
-        <Grid item xs={3}>
-        <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+        <Grid item sm={6} md={3} lg={3}>
+        <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
      
         <Grid container spacing={2}>
-        <Grid item xs={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <Grid item sm={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Box sx={{ borderRadius: "15px", width: "60px", height: "60px", backgroundColor: "#eef1ff", display: "flex", alignItems: "center", justifyContent: "center" }}> 
                 <Typography variant="p" sx={{ color: "#556ee6", fontWeight: "600", fontSize: "17px" }}>16</Typography>
             </Box>
         </Grid>
-        <Grid item xs={7} sx={{ display: "flex", alignItems: "center" }}>
+        <Grid item sm={8} sx={{ display: "flex", alignItems: "center" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
                 <Typography variant="p" sx={{ color: "#606060", fontWeight: "600", fontSize: "13px", marginLeft: "5px" }}>Available leaves</Typography>
             </Box>
@@ -84,16 +84,16 @@ function createData(
         </Box>
         </Grid>
 
-        <Grid item xs={3}>
-        <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+        <Grid item sm={6} md={3} lg={3}>
+        <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
       
         <Grid container spacing={2}>
-        <Grid item xs={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <Grid item sm={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Box sx={{ borderRadius: "15px", width: "60px", height: "60px", backgroundColor: "#eef1ff", display: "flex", alignItems: "center", justifyContent: "center" }}> 
                 <Typography variant="p" sx={{ color: "#556ee6", fontWeight: "600", fontSize: "17px" }}>10</Typography>
             </Box>
         </Grid>
-        <Grid item xs={7} sx={{ display: "flex", alignItems: "center" }}>
+        <Grid item sm={8} sx={{ display: "flex", alignItems: "center" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
                 <Typography variant="p" sx={{ color: "#606060", fontWeight: "600", fontSize: "13px", marginLeft: "5px" }}>Previous unused leaves</Typography>
             </Box>
@@ -104,16 +104,16 @@ function createData(
         </Box>
         </Grid>
 
-        <Grid item xs={3}>
-        <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+        <Grid item sm={6} md={3} lg={3}>
+        <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
        
         <Grid container spacing={2}>
-        <Grid item xs={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <Grid item sm={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Box sx={{ borderRadius: "15px", width: "60px", height: "60px", backgroundColor: "#ffe5c5", display: "flex", alignItems: "center", justifyContent: "center" }}> 
                 <Typography variant="p" sx={{ color: "#ec8700", fontWeight: "600", fontSize: "17px" }}>02</Typography>
             </Box>
         </Grid>
-        <Grid item xs={7} sx={{ display: "flex", alignItems: "center" }}>
+        <Grid item sm={8} sx={{ display: "flex", alignItems: "center" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
                 <Typography variant="p" sx={{ color: "#606060", fontWeight: "600", fontSize: "13px", marginLeft: "5px" }}>Pending leave request</Typography>
             </Box>
@@ -123,16 +123,16 @@ function createData(
         </Box>
         </Grid>
 
-        <Grid item xs={3}>
-        <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+        <Grid item sm={6} md={3} lg={3}>
+        <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
         
         <Grid container spacing={2}>
-        <Grid item xs={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <Grid item sm={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Box sx={{ borderRadius: "15px", width: "60px", height: "60px", backgroundColor: "#fcd0ce", display: "flex", alignItems: "center", justifyContent: "center" }}> 
                 <Typography variant="p" sx={{ color: "#d52702", fontWeight: "600", fontSize: "17px" }}>03</Typography>
             </Box>
         </Grid>
-        <Grid item xs={7} sx={{ display: "flex", alignItems: "center" }}>
+        <Grid item sm={8} sx={{ display: "flex", alignItems: "center" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
                 <Typography variant="p" sx={{ color: "#606060", fontWeight: "600", fontSize: "13px", marginLeft: "5px" }}>Rejected leaves</Typography>
             </Box>
@@ -148,32 +148,35 @@ function createData(
 
 <br />
 
-        <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
-        <Grid container spacing={2}>
-        <Grid item xs={9} sx={{ display: "flex", alignItems: "center", justifyContent: "flex-start" }}>
-
-            <Icon marginLeft="0 !important"><ErrorOutline color="error"/></Icon>
-                
-            <Typography variant="p" sx={{ fontSize: "13px", fontWeight: "600", marginLeft: "10px" }}>
-           You were absent on 13th April 2024.
+        <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+        <Grid container >
+        <Grid item sm={0.6} md={0.3} sx={{ display: "flex", alignItems: "center", justifyContent: "flex-start" }}>
+            <Icon sx={{marginLeft:"0px !important" }}><ErrorOutline color="error"/></Icon>
+        </Grid>
+            <Grid item sm={6.4} md={8.7} sx={{ display: "flex", alignItems: "center", justifyContent: "flex-start" }}>
+                <Typography variant="p" sx={{ fontSize: "13px", fontWeight: "600", marginLeft: "10px" }}>
+            You were absent on 13th April 2024.
                 </Typography>
             </Grid>
 
-            <Grid item xs={3} sx={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
+            <Grid item sm={5} md={3} sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
 
             <Button variant="text" 
             sx={{ textTransform:"none",
             fontSize:"13px",
             fontFamily:"Poppins,san-serif",
-            color:"#556ee6"}}
+            color:"#556ee6",
+            "&:hover": {backgroundColor: "transparent"}}}
             alignItems= "flex-start !important" >Apply leave</Button>
 
             <Button variant="outlined" 
             sx={{ textTransform:"none",
+            width:"130px",
             fontSize:"13px",
             fontFamily:"Poppins,san-serif",
             color:"#556ee6",
-            borderColor:"#a8acb8"}}
+            borderColor:"#a8acb8",
+           }}
             alignItems= "flex-start !important" >Apply on duty</Button>
             </Grid>
             </Grid>
@@ -182,24 +185,26 @@ function createData(
 
 <br />
 
-    <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
-    <Grid container spacing={2}>
-    <Grid item xs={9} sx={{ display: "flex", alignItems: "center", justifyContent: "flex-start" }}>            
+<Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+    <Grid container>
+    <Grid item sm={7} md={8} sx={{ display: "flex", alignItems: "center", justifyContent: "flex-start" }}>
     <Typography variant="p" sx={{ fontSize: "13px", fontWeight: "600", marginLeft: "10px" }}>
   Your compensatory off will expire on 31 Apr 2024
         </Typography>
     </Grid>
 
-    <Grid item xs={3} sx={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
+    <Grid item sm={5} md={4} sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
 
     <Button variant="text" 
     sx={{ textTransform:"none",
     fontSize:"13px",
-    fontFamily:"Poppins,san-serif",color:"#556ee6"}}
+    fontFamily:"Poppins,san-serif",color:"#556ee6",
+    "&:hover": {backgroundColor: "transparent"}}}
     alignItems= "flex-start !important" >Read leave policy</Button>
 
     <Button variant="outlined" 
     sx={{ textTransform:"none",
+    width:"130px",
     fontSize:"13px",
     fontFamily:"Poppins,san-serif",color:"#556ee6", 
     borderColor:"#a8acb8"}}
@@ -209,14 +214,15 @@ function createData(
     </Box>
 
     <br />
+
     <Box sx={{bgcolor:"#fff",borderRadius:"15px",padding:"20px", marginTop:"25px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
            <Typography variant="h6" sx={{fontFamily:"inherit"}}>Leaves</Typography>
            <br/>
 
-            <Grid container spacing={1}>
-           <Grid item xs="2">
+            <Grid container>
+           <Grid item sm={3} md={2.5} lg={1.5}>
           <Dropdown>
-            <MenuButton sx={{padding:"6px 30px", border:"1px solid #d4d4d4", color:"#a4a4a4", fontWeight:"600" ,fontSize:"15px", alignItems: "flex-start !important" }}>Last 6 months
+            <MenuButton sx={{padding:"6px 10px", border:"1px solid #d4d4d4", color:"#a4a4a4", fontWeight:"600" ,fontSize:"15px", alignItems: "flex-start !important" }}>Last 6 months
             <IconButton sx={{ alignItems: "flex-start !important" , padding:"0px"}}>
                 <KeyboardArrowDown sx={{color:"#898989",  alignItems: "flex-start !important"  }}/>
                 </IconButton>
@@ -229,9 +235,9 @@ function createData(
         </Dropdown>
             </Grid>
 
-          <Grid item xs="2">
+          <Grid item sm={3} md={2.5} lg={1.5}>
           <Dropdown>
-            <MenuButton sx={{padding:"6px 30px", border:"1px solid #d4d4d4", color:"#a4a4a4", fontWeight:"600" ,fontSize:"15px", alignItems: "flex-start !important" }}>Status  
+            <MenuButton sx={{padding:"6px 10px", border:"1px solid #d4d4d4", color:"#a4a4a4", fontWeight:"600" ,fontSize:"15px", alignItems: "flex-start !important" }}>Status  
             <IconButton sx={{ alignItems: "flex-start !important" , padding:"0px"}}>
                 <KeyboardArrowDown sx={{color:"#898989",  alignItems: "flex-start !important"  }}/>
                 </IconButton>
@@ -244,7 +250,7 @@ function createData(
         </Dropdown>
             </Grid>
 
-            <Grid item xs="8" display="flex" justifyContent="flex-end">
+            <Grid item sm={6} md={7} lg={9} display="flex" justifyContent="flex-end">
             <Button variant="contained" 
             sx={{ textTransform:"none",
             fontSize:"13px",
@@ -257,7 +263,7 @@ function createData(
            <br/>
 
             <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <Table aria-label="simple table">
                 <TableHead>
                 <TableRow  sx={{bgcolor:"#ecececde", height:"40px",color:"#787a81"}}>
                     <TableCell sx={{ borderRadius: "10px" ,border:"5px solid white" }}>Srno</TableCell>

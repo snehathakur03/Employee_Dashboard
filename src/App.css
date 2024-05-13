@@ -21,7 +21,7 @@
 }
 
 .navbar {
-  background-color: #ffffff;
+  background-color: #edecec57;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -37,13 +37,13 @@
 
 .nav-menu {
   background-color: #ffffff;
-  width: 80px !important;
-  height: 100vh;
+ /* width: 80px !important; */
+height: 100vh;
   display: flex;
   justify-content: center;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
-  left: -100%;
+  left: -100%; 
   transition: 850ms;
 }
 
@@ -102,100 +102,3 @@ span {
 
 
 }
-
-@media screen and (min-width: 768px) {
-  .menu-bars {
-    display: none;
-  }
-
-  .nav-menu {
-    left: 0 !important;
-
-  }
-
-  .navbar-toggle{
-    display: none;
-  }
-}
-
-/* CSS for transition effect only in mobile view */
-@media screen and (max-width: 767px) {
-  .nav-menu.active {
-    left: 0;
-    transition: 450ms;
-  }
-
-  .nav-menu{
-    height: 220vh;
-  }
-  
-}
-
-.custom-calendar {
-  margin: 0 !important;
-
-}
-
-.css-1rtg91x-MuiDateCalendar-root {
-  /* overflow: hidden; */
-  width: 850px !important;
-  max-height: 800px !important;
-  height: 800px !important;
-
-}
-
-.css-i5q14k-MuiDayCalendar-header {
-justify-content: flex-start !important;
-width: 850px !important;
-height: 40px !important;
-padding-left: 0px !important;
-padding-right: 0px !important;
-
-
-}
-
-
-.css-flbe84-MuiDayCalendar-weekContainer {
-  -webkit-justify-content: flex-start !important;
-  width: 850px !important;
-  height: 80px !important;
-  border-top: solid 1px #dfdadac2;
-
-
-}
-
-.css-rhmlg1-MuiTypography-root-MuiDayCalendar-weekDayLabel {
-width:121px !important;
-}
-
-.css-1ayjnp4-MuiPickersDay-root, .css-1wy8uaa-MuiButtonBase-root-MuiPickersDay-root ,.css-23p0if-MuiButtonBase-root-MuiPickersDay-root  {
-  width:121px !important;
-
-}
-
-.css-1wy8uaa-MuiButtonBase-root-MuiPickersDay-root {
-  font-weight: 600 !important;
-}
-.css-23p0if-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected){
- border: none !important;
-}
-
-
-.css-1t0788u-MuiPickersSlideTransition-root-MuiDayCalendar-slideTransition {
-  display: block;
-  position: relative;
-  overflow-x: unset !important;
-  min-height: 400px !important;
-}
-
-.css-14iq4xa-MuiDayCalendar-root {
-  border: solid 1px #dfdadac2;
-
-}
-
-#outlined-basic label {
-font-size: 13PX !important;
-color: #dfdadac2 !important;
-}
-
-

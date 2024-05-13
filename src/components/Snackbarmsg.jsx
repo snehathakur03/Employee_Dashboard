@@ -37,7 +37,7 @@ export default function BottomRightSnackbar() {
             padding: "20px",
             boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
             color:"#000",
-            width:"900px",
+           width:"700px"
           },
         }}
         message={
@@ -94,8 +94,8 @@ export default function BottomRightSnackbar() {
         padding: "20px",
         boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
         color:"#000",
-        width:"900px",
         marginTop: "20px",
+        width:"700px"
       },
     }}
     message={

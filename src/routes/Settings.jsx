@@ -76,7 +76,7 @@ export default function UserSetting() {
 
   return (
     <>
-      <Box paddingLeft={4} paddingRight={4} height="100vh" flex={4} bgcolor={"#edecec57"}>
+      <Box paddingLeft={4} paddingRight={4} height="100vh"  bgcolor={"#edecec57"}>
         <Box padding={"16px 0px"} width={"100%"}>
           <Typography fontWeight={700} fontSize={19} variant="p">
             Settings
@@ -84,10 +84,10 @@ export default function UserSetting() {
         </Box>
         <Divider />
 
-        <Box sx={{ bgcolor: "#fff", width: "75%", height: "auto", borderRadius: "15px", padding: "20px", marginTop: "15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
+        <Box sx={{ bgcolor: "#fff", width:"80%", height: "auto", borderRadius: "15px", padding: "20px", marginTop: "15px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
 
-          <Grid container spacing={3}>
-            <Grid item xs={3}>
+          <Grid container >
+            <Grid item sm={4} md={3.7} lg={3}>
               <Box display="flex" flexDirection="column" alignItems="center" >
                 <Avatar src={selectedAvatar} sx={{ bgcolor: "transparent", width: "150px", height: "150px", backgroundColor: "#eef1ff" }}>
                   {selectedAvatar ? null : <PersonOutlineOutlined sx={{ fontSize: "4.5rem", color: "#556ee6" }} />}
@@ -102,7 +102,7 @@ export default function UserSetting() {
             </Grid>
             <Divider orientation="vertical" variant="middle" flexItem />
 
-            <Grid item justifyContent="center" xs={8}>
+            <Grid item justifyContent="center" sm={7.7}  md={8} lg={7}>
 
               <Box
                 component="form"
@@ -111,6 +111,7 @@ export default function UserSetting() {
                 }}
                 noValidate
                 autoComplete="off"
+                paddingLeft="15px"
               >
   <TextField id="outlined-basic" size="small" label="First Name" variant="outlined" 
     sx={{
@@ -189,13 +190,13 @@ export default function UserSetting() {
             </MenuItem>
           ))}
         </TextField>
-    
-                      </Box>
+        <Box>
+        <Button variant="contained" sx={{ backgroundColor: "#556ee6", boxShadow: "none", textTransform: "capitalize", fontWeight: "500", }}>Save</Button>
+        <Button variant="text" sx={{ color: "#516ed9", textTransform: "capitalize", fontWeight: "600",'&:hover':{bgcolor:'transparent !important' }}}>Cancel</Button>
+        </Box>
+    </Box>
 
-              <Stack direction="row" sx={{ marginLeft: '68%', marginTop: "70px" }}>
-                <Button variant="text" sx={{ color: "#516ed9", textTransform: "capitalize", fontWeight: "600", width: "100px" ,'&:hover':{bgcolor:'transparent !important' }}}>Cancel</Button>
-                <Button variant="contained" sx={{ backgroundColor: "#556ee6", boxShadow: "none", textTransform: "capitalize", fontWeight: "500", width: "100px" }}>Save</Button>
-              </Stack>
+            
             </Grid>
           </Grid>
         </Box>
